@@ -21,7 +21,7 @@ docker build -t ffw .
 Start the container, name it `ffw1`:
 
 ```
-docker run -ti --name ffw1 ffwtest
+docker run -ti --privileged -lxc-conf="aa_profile=unconfined" --name ffw1 ffw
 ```
 
 If you exit via CTRL-D, and want to continue later, just do: 
