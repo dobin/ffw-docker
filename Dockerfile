@@ -7,8 +7,8 @@ RUN apt-get update && \
     git clone https://github.com/dobin/ffw.git && \
     ( cd ffw && git checkout fenrir ) && \
     ( cd ffw && pip install -r requirements.txt ) && \
-    ( cd ffw && git clone https://github.com/aoh/radamsa.git && cd radamsa && make ) && \
-    ( cd ffw && git clone https://github.com/dobin/honggfuzz && cd honggfuzz && git checkout pull-dobinffw  && make ) && \
+    ( cd ffw && git clone https://gitlab.com/akihe/radamsa.git && cd radamsa && make ) && \
+    ( cd ffw && git clone https://github.com/dobin/honggfuzz && cd honggfuzz && git checkout pull-dobinffw && make ) && \
     ( cd / && git clone https://github.com/dobin/ffw-examples.git ) && \
     ( mkdir /Development; ln -s /ffw /Development/ffw; ln -s /ffw/honggfuzz /Development/honggfuzz; ln -s /ffw-examples /Development/ffw-examples )
 
