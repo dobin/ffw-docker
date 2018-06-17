@@ -31,3 +31,10 @@ docker attach ffw1
 ```
 
 Data will persist.
+
+## Port forward
+
+
+```
+docker run -ti --privileged -lxc-conf="aa_profile=unconfined" -p 10000:10000 --name ffw1 ffw
+```
